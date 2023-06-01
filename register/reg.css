@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fb100a;
+  background-image: linear-gradient(45deg, #fb100a 7%, #af0600 56%);
+}
+
+.formulario {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 10px 10px 10px #000;
+}
+
+.formulario h1 {
+  text-align: center;
+  border-bottom: 3px solid #000;
+}
+
+.formulario__form {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#mail {
+  margin-left: 60px;
+}
+
+.formulario__form input {
+  border: 1px solid #000;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.formulario__form:hover {
+  color: #af0600;
+}
+
+.formulario__form input:focus {
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #070a093d 100%);
+}
+
+.formulario__boton input {
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 100px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.formulario__boton:active input {
+  background-color: #af0600;
+}
+
+.cuenta {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.cuenta a {
+  color: #af0600;
+  gap: 10px;
+}
+
+.cuenta a:last-child {
+  color: rgb(36, 36, 199);
+  text-decoration: none;
+}
