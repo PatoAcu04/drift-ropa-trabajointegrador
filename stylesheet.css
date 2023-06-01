@@ -451,25 +451,141 @@ textarea:focus {
   margin-top: 0.5rem;
 }
 
-@media (width < 700px) {
+/* mediaqueries celular */
+
+@media (width < 768px) {
   .navbar {
-    flex-wrap: wrap;
     justify-content: space-between;
   }
   .navbar__lista {
     display: none;
   }
-
+  .login {
+    gap: 10px;
+  }
   .derecha-nav {
     font-size: 1.3rem;
     gap: 20px;
+    display: flex;
   }
 
   .navbar img {
-    display: none;
+    margin-left: 50px;
+    width: 40px;
   }
 
   .navbar__lista--pri {
     margin-left: 2rem;
+  }
+
+  .inicio__menu {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .inicio__menu h1 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .inicio__menu h2 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .registro {
+    font-size: 30px;
+    font-weight: 300;
+    padding: 5px;
+  }
+
+  #cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards__buzos {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 80%;
+    opacity: 1;
+  }
+
+  .cards__buzos p:first-child {
+    font-size: 20px;
+  }
+
+  .cards__buzos img {
+    width: 100%;
+    height: 60%;
+  }
+
+  #cards-2 {
+    display: none;
+  }
+
+  #temporadas h1 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .invierno h2,
+  .verano h2 {
+    display: none;
+  }
+
+  .invierno__image {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .invierno img {
+    width: 80%;
+  }
+
+  .verano img {
+    width: 80%;
+  }
+  s .invierno,
+  .verano {
+    padding-top: 30px;
+  }
+
+  #temporadas a:hover {
+    font-weight: 200;
+    padding: 0;
+    transition: 0.2s;
+  }
+
+  .verano__image {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .footer__contacto {
+    flex-direction: column;
+    padding: 10px;
+    gap: 50px;
+  }
+
+  .footer h2 {
+    font-size: 50px;
+  }
+
+  .redes-sociales {
+    align-items: center;
+  }
+
+  .medios-de-pago img {
+    width: 100%s;
+  }
+
+  #copyright a {
+    display: none;
   }
 }
