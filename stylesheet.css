@@ -72,7 +72,6 @@ body {
 }
 
 .derecha-nav {
-  display: flex;
   font-size: 2rem;
   gap: 30px;
   align-items: center;
@@ -83,13 +82,9 @@ body {
   position: relative;
 }
 
-#cart {
-  position: absolute;
-  opacity: 0;
-}
-
 #hamburguesa {
   opacity: 0;
+  position: absolute;
 }
 
 /* fin primera parte */
@@ -453,7 +448,7 @@ textarea:focus {
 
 /* mediaqueries celular */
 
-@media (width < 768px) {
+@media (width < 769px) {
   .navbar {
     justify-content: space-between;
   }
@@ -581,11 +576,119 @@ textarea:focus {
     align-items: center;
   }
 
+  .medios-de-pago {
+    justify-content: center;
+    width: 100%;
+  }
+
   .medios-de-pago img {
-    width: 100%s;
+    width: 100%;
   }
 
   #copyright a {
     display: none;
+  }
+}
+
+/* mediaq tablets */
+
+@media (width > 768px) and (width < 1300px) {
+  .inicio__menu {
+    width: 80%;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar__lista {
+    display: none;
+  }
+
+  .login {
+    gap: 10px;
+  }
+
+  .derecha-nav {
+    font-size: 2.5rem;
+    gap: 20px;
+    display: flex;
+  }
+
+  .navbar img {
+    margin-left: 50px;
+    width: 40px;
+  }
+
+  #cards,
+  #cards-2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 30px;
+  }
+
+  #cards {
+    margin-bottom: 30px;
+  }
+
+  .card-info {
+    justify-content: flex-start;
+
+    align-items: center;
+  }
+
+  .cards__buzos {
+    justify-content: center;
+    opacity: 1;
+
+    align-items: center;
+  }
+
+  .medios-de-pago {
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+  }
+  .medios-de-pago img {
+    width: 100%;
+  }
+}
+
+@media (width > 1300px) {
+  .contacts {
+    width: 600px;
+  }
+
+  .medios-de-pago img {
+    width: 400px;
+  }
+
+  .login {
+    font-size: 40px;
+    gap: 50px;
+  }
+}
+
+@media (width<1300px) {
+  .navbar__lista {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 45px;
+    height: calc(100vh);
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+
+  .derecha-nav i {
+    display: block;
+  }
+
+  #hamburguesa:active ~ .navbar__lista {
+    display: flex;
   }
 }
