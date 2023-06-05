@@ -24,21 +24,68 @@ body {
     #919191 100%
   );
 }
-.navbar {
+
+.header {
   display: flex;
-  justify-content: space-around;
-  background-color: black;
-  color: var(--principal);
-  width: 100%;
-  box-shadow: 0 8px 10px rgba(29, 29, 29, 0.644);
-  transition: 0.3s;
-  font-family: "Poppins", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   position: fixed;
+  width: 100%;
   z-index: 2;
-  opacity: 0.9;
+  background-color: #222;
 }
 
-.navbar:hover {
+.header img {
+  width: 6%;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar i {
+  font-size: 36px;
+  display: none;
+}
+
+#hamburguesa {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .navbar ul {
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
+  .navbar i {
+    display: flex;
+  }
+
+  #hamburguesa:checked ~ .navbar ul {
+    display: flex;
+  }
+}
+
+/* .navbar ul {
+  display: flex;
+  gap: 30px;
+}
+
+.header:hover {
   box-shadow: 0 15px 20px rgba(29, 29, 29, 0.644);
   transition: 0.3s;
 }
@@ -52,8 +99,12 @@ body {
   font-size: 30px;
 }
 
-.navbar__lista {
+.navbar {
   display: flex;
+  align-items: center;
+}
+
+.navbar__lista {
   color: var(--principal);
   position: relative;
   font-weight: 200;
@@ -62,7 +113,7 @@ body {
 .navbar__lista:hover {
   background: #222;
   outline: 1px solid rgba(255, 255, 255, 0.514);
-  padding: 5px 0;
+  padding: 3px 0;
   border-radius: 5px;
 }
 
@@ -71,21 +122,15 @@ body {
   font-weight: 400;
 }
 
-.derecha-nav {
-  font-size: 2rem;
-  gap: 30px;
-  align-items: center;
+.header i {
+  position: relative;
   display: none;
 }
 
-.fa-solid {
-  position: relative;
-}
-
 #hamburguesa {
-  opacity: 0;
+  display: none;
   position: absolute;
-}
+} */
 
 /* fin primera parte */
 
@@ -144,7 +189,7 @@ body {
   text-decoration: underline;
 }
 
-/* aca va el responsive de la primeraa parte de la pag */
+/* fin segunda parte*/
 
 #cards {
   display: flex;
@@ -214,8 +259,6 @@ body {
   justify-content: center;
 }
 
-/* aca va el responsive de la segunda parte de la pag */
-
 .coleccion {
   font-size: 50px;
   font-family: "Libre Baskerville", serif;
@@ -244,8 +287,6 @@ body {
 .contenedor__boton:hover {
   outline: 1px solid #fff;
 }
-
-/* aca va el responsive de la tercera parte de la pag */
 
 #temporadas h1 {
   margin-top: 70px;
@@ -337,7 +378,7 @@ body {
   box-shadow: 10px -10px 30px #5e5e5e;
 }
 
-/* aca va mediaqueries */
+/* footer */
 
 .footer {
   background: rgb(46, 46, 46);
@@ -449,7 +490,7 @@ textarea:focus {
 /* mediaqueries celular */
 
 @media (width < 769px) {
-  .navbar {
+  /* .navbar {
     justify-content: space-between;
   }
   .navbar__lista {
@@ -457,11 +498,6 @@ textarea:focus {
   }
   .login {
     gap: 10px;
-  }
-  .derecha-nav {
-    font-size: 1.3rem;
-    gap: 20px;
-    display: flex;
   }
 
   .navbar img {
@@ -471,7 +507,7 @@ textarea:focus {
 
   .navbar__lista--pri {
     margin-left: 2rem;
-  }
+  } */
 
   .inicio__menu {
     width: 100%;
@@ -593,32 +629,13 @@ textarea:focus {
 /* mediaq tablets */
 
 @media (width > 768px) and (width < 1300px) {
-  .inicio__menu {
+  /* .inicio__menu {
     width: 80%;
   }
 
-  .navbar {
-    justify-content: space-between;
-  }
-
-  .navbar__lista {
-    display: none;
-  }
-
-  .login {
-    gap: 10px;
-  }
-
-  .derecha-nav {
-    font-size: 2.5rem;
-    gap: 20px;
-    display: flex;
-  }
-
-  .navbar img {
-    margin-left: 50px;
-    width: 40px;
-  }
+  .header img {
+    height: 10%;
+  } */
 
   #cards,
   #cards-2 {
@@ -671,8 +688,8 @@ textarea:focus {
   }
 }
 
-@media (width<1300px) {
-  .navbar__lista {
+/* @media (width<1300px) {
+  .navbar ul {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -684,11 +701,15 @@ textarea:focus {
     font-size: 30px;
   }
 
-  .derecha-nav i {
-    display: block;
+  .navbar i {
+    display: none;
   }
 
-  #hamburguesa:active ~ .navbar__lista {
+  #hamburguesa {
+    display: none;
+  }
+
+  #hamburguesa:checked ~ .navbar__lista {
     display: flex;
   }
-}
+} */

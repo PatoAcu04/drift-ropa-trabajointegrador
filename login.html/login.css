@@ -18,12 +18,22 @@ body {
   border-radius: 10px;
   width: 400px;
   background-color: #fff;
+
+  opacity: 0.9;
   box-shadow: 10px 10px 10px #000;
+}
+
+.imagen {
+  background-image: url(/img/hombre-muestra-ropa-deportiva-brillante-camara-fondo-entrenamiento_245974-8715.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
 .formulario h1 {
   text-align: center;
   border-bottom: 3px solid #000;
+  font-weight: 700;
 }
 
 .formulario__form {
@@ -47,7 +57,7 @@ body {
 }
 
 .formulario__boton input {
-  padding: 3px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +67,7 @@ body {
   margin-left: 100px;
   font-size: 30px;
   font-weight: 400;
+  display: inline-block;
 }
 
 .formulario__boton:active input {

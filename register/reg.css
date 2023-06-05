@@ -9,6 +9,13 @@ body {
   background-image: linear-gradient(45deg, #fb100a 7%, #af0600 56%);
 }
 
+.imagen-fondo {
+  background-image: url(/img/123871374_461612921491798_1003483085140659008_n1-22fc01162a29e9361e16045892313197-480-011-b99b7e6fcd930fa5c916304214121983-640-0.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
 .formulario {
   position: absolute;
   top: 50%;
@@ -19,6 +26,7 @@ body {
   width: 400px;
   background-color: #fff;
   box-shadow: 10px 10px 10px #000;
+  opacity: 0.8;
 }
 
 .formulario h1 {
