@@ -35,27 +35,38 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgb(0, 0, 0);
   position: fixed;
   width: 100%;
   z-index: 2;
   background-color: #222;
   opacity: 0.95;
   align-items: center;
+
+  transition: 0.3s;
+}
+
+.header:hover {
+  box-shadow: 0 17px 30px #000;
+  transition: 0.3s;
 }
 
 .header img {
-  width: 7%;
+  width: 6rem;
 }
 
 .navbar ul {
   display: flex;
   gap: 100px;
-  align-items: center;
 }
 
 .navbar {
   display: flex;
+}
+
+.navbar__lista {
+  font-size: 30px;
+  color: #8b4141;
 }
 
 .login a {
@@ -71,7 +82,7 @@ body {
 }
 
 .navbar i {
-  font-size: 36px;
+  font-size: 4rem;
   display: none;
 }
 
@@ -79,7 +90,7 @@ body {
   display: none;
 }
 
-/* mediaqueries navbar */
+/* mediaqueries menu hamburguesa */
 
 @media (max-width: 1300px) {
   .navbar ul {
@@ -88,7 +99,7 @@ body {
     height: calc(100vh);
     flex-direction: column;
     position: absolute;
-    top: 2.7rem;
+    top: 6rem;
     left: 0;
     justify-content: center;
     align-items: center;
@@ -126,7 +137,7 @@ body {
 }
 
 .inicio__menu {
-  width: 50%;
+  width: 70%;
   text-align: center;
   margin-top: 8rem;
 }
@@ -472,7 +483,6 @@ textarea:focus {
 @media (width < 769px) {
   .inicio__menu {
     width: 100%;
-    margin-top: 3rem;
   }
   .inicio__menu h1 {
     font-size: 50px;
@@ -491,11 +501,23 @@ textarea:focus {
     padding: 5px;
   }
 
+  .header img {
+    width: 3rem;
+  }
+
+  .navbar i {
+    font-size: 2rem;
+  }
+
+  .navbar ul {
+    top: 3rem;
+  }
+
   #cards {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 50%;
+    flex-wrap: wrap;
   }
 
   #cards a {
@@ -511,7 +533,7 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    width: 80%;
+    width: 60%;
     opacity: 1;
   }
 
@@ -529,7 +551,7 @@ textarea:focus {
   }
 
   #temporadas h1 {
-    font-size: 50px;
+    font-size: 70px;
     margin-top: 0;
     margin-bottom: 30px;
   }
@@ -542,7 +564,10 @@ textarea:focus {
   .invierno__image {
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+    width: 80%;
+    height: 80%;
+    padding-left: 200px;
+    padding-top: 30px;
   }
 
   .invierno img {
@@ -552,7 +577,7 @@ textarea:focus {
   .verano img {
     width: 80%;
   }
-  s .invierno,
+  .invierno,
   .verano {
     padding-top: 30px;
   }
@@ -566,7 +591,11 @@ textarea:focus {
   .verano__image {
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+
+    width: 80%;
+    height: 80%;
+    padding-left: 200px;
+    padding-top: 30px;
   }
 
   .footer__contacto {
@@ -611,6 +640,7 @@ textarea:focus {
 
   #cards {
     margin-bottom: 30px;
+    width: 100%;
   }
 
   .card-info {
@@ -626,7 +656,6 @@ textarea:focus {
   .cards__buzos {
     justify-content: center;
     opacity: 1;
-
     align-items: center;
   }
 
@@ -652,5 +681,13 @@ textarea:focus {
   .login {
     font-size: 40px;
     gap: 50px;
+  }
+}
+
+@media (width > 1300px) and (width < 1600px) {
+  .navbar__lista {
+    font-size: 20px;
+    color: red;
+    gap: 0;
   }
 }
